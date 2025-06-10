@@ -38,6 +38,20 @@ body {
     padding: 0 20px;
 }
 
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 98%;
+        padding: 0 5px;
+    }
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
@@ -58,6 +72,43 @@ h3 {
 
 h4 {
     font-size: 1.5rem;
+}
+
+/* Mobile Typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    h4 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    h4 {
+        font-size: 1.2rem;
+    }
 }
 
 p {
@@ -275,8 +326,12 @@ nav a.active {
 }
 
 /* Tutorial content page */
-.tutorial-content {
-    padding: 2rem 0;
+.content-page, .tutorial-content {
+    padding: 3rem 0;
+}
+
+.content-page .container {
+    max-width: 800px;
 }
 
 .breadcrumbs {
@@ -286,31 +341,28 @@ nav a.active {
 
 /* Responsive tutorial content */
 @media (max-width: 768px) {
-    .tutorial-content {
-        padding: 1.5rem 0;
+    .tutorial-content, .content-page {
+        padding: 2rem 0;
     }
     
     .breadcrumbs {
         margin-bottom: 1.5rem;
         font-size: 0.9rem;
     }
-    
-    article h1 {
-        font-size: 2rem;
-    }
-    
-    article h2 {
-        font-size: 1.75rem;
-    }
-    
-    article h3 {
-        font-size: 1.5rem;
-    }
 }
 
 @media (max-width: 576px) {
-    .tutorial-content {
+    .tutorial-content, .content-page {
         padding: 1rem 0;
+    }
+    
+    .breadcrumbs {
+        margin-bottom: 1rem;
+        font-size: 0.85rem;
+    }
+    
+    article p, article li {
+        font-size: 0.95rem;
     }
     
     article h1 {
