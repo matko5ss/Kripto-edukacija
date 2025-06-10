@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenuBtn.appendChild(span);
         }
         
-        // Insert button before nav
-        header.insertBefore(mobileMenuBtn, nav);
+        // Append button after nav to position it on the right
+        header.appendChild(mobileMenuBtn);
         
         // Toggle menu on button click
         mobileMenuBtn.addEventListener('click', function() {
