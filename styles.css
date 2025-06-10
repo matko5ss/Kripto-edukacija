@@ -10,6 +10,14 @@
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Responsive breakpoints */
+:root {
+    --mobile-breakpoint: 576px;
+    --tablet-breakpoint: 768px;
+    --desktop-breakpoint: 992px;
+    --large-desktop-breakpoint: 1200px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -123,6 +131,75 @@ nav a.active {
     border-bottom: 2px solid var(--accent-color);
 }
 
+/* Mobile menu button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 100;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger animation */
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    nav ul {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        box-shadow: var(--box-shadow);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        z-index: 99;
+    }
+    
+    nav ul.show {
+        transform: translateY(0);
+    }
+    
+    nav li {
+        margin: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav a {
+        display: block;
+        padding: 0.75rem;
+    }
+}
+
 /* Hero section */
 .hero {
     padding: 4rem 0;
@@ -142,6 +219,32 @@ nav a.active {
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto;
+}
+
+/* Responsive hero section */
+@media (max-width: 768px) {
+    .hero {
+        padding: 3rem 1rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 2rem 1rem;
+        margin: 1rem 0;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
 }
 
 /* Intro section */
@@ -171,6 +274,27 @@ nav a.active {
     color: var(--primary-color);
 }
 
+/* Responsive tutorials section */
+@media (max-width: 768px) {
+    .tutorials {
+        padding: 1.5rem 0;
+    }
+    
+    .tutorial-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .tutorial-card {
+        padding: 1rem;
+    }
+    
+    .tutorial-card:hover {
+        transform: none;
+    }
+}
+
 .btn {
     display: inline-block;
     background-color: var(--primary-color);
@@ -195,6 +319,53 @@ nav a.active {
 .breadcrumbs {
     margin-bottom: 2rem;
     color: #777;
+}
+
+/* Responsive tutorial content */
+@media (max-width: 768px) {
+    .tutorial-content {
+        padding: 1.5rem 0;
+    }
+    
+    .breadcrumbs {
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    article h1 {
+        font-size: 2rem;
+    }
+    
+    article h2 {
+        font-size: 1.75rem;
+    }
+    
+    article h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .tutorial-content {
+        padding: 1rem 0;
+    }
+    
+    article h1 {
+        font-size: 1.8rem;
+    }
+    
+    article h2 {
+        font-size: 1.5rem;
+    }
+    
+    article h3 {
+        font-size: 1.3rem;
+    }
+    
+    article pre {
+        padding: 1rem;
+        overflow-x: auto;
+    }
 }
 
 article {
