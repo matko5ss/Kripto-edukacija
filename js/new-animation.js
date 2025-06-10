@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // Clear existing content
   logoDiv.innerHTML = "";
   
+  // Create link to homepage
+  const homeLink = document.createElement('a');
+  homeLink.href = 'index.html';
+  homeLink.className = 'home-link';
+  homeLink.title = 'Povratak na početnu stranicu';
+  
   // Create container for animation and text
   const logoContainer = document.createElement('div');
   logoContainer.className = 'logo-container';
@@ -28,11 +34,27 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add elements to the page
   logoContainer.appendChild(animationContainer);
   logoContainer.appendChild(logoText);
-  logoDiv.appendChild(logoContainer);
+  homeLink.appendChild(logoContainer);
+  logoDiv.appendChild(homeLink);
   
   // Add styles
   const style = document.createElement('style');
   style.textContent = `
+    .home-link {
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      display: block;
+    }
+    
+    .home-link:hover {
+      transform: scale(1.05);
+    }
+    
+    .home-link:active {
+      transform: scale(0.98);
+    }
+    
     .logo-container {
       display: flex;
       flex-direction: column;
