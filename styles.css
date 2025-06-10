@@ -38,6 +38,12 @@ body {
     padding: 0 20px;
 }
 
+@media (max-width: 768px) {
+    header .container {
+        padding-left: 0;
+    }
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
@@ -168,10 +174,16 @@ nav a.active {
     header .container {
         justify-content: space-between;
         width: 100%;
+        padding: 0 10px 0 0;
     }
     
     header .logo {
         margin-left: 0;
+        padding-left: 0;
+    }
+    
+    header .logo a {
+        padding-left: 0;
     }
     
     .mobile-menu-btn {

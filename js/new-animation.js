@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
   homeLink.href = 'index.html';
   homeLink.className = 'home-link';
   homeLink.title = 'Povratak na početnu stranicu';
+  homeLink.style.display = 'block';
   
   // Create container for animation and text
   const logoContainer = document.createElement('div');
