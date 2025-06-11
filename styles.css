@@ -362,6 +362,43 @@ nav a.active {
   }
 }
 
+/* Concept box styling */
+.concept-box {
+  background-color: #f8f9fa;
+  border-left: 4px solid var(--primary-color);
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.concept-box h5 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Tutorial navigation styling */
+.tutorial-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.prev-tutorial, .next-tutorial {
+  display: inline-block;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.prev-tutorial:hover, .next-tutorial:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
 .breadcrumbs {
     margin-bottom: 2rem;
     color: #777;
