@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Osnovni pojmovi i tehnologija - RARA</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/faviparrot.gif" type="image/gif" />
+    <script src="js/new-animation.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <!-- Animation will be inserted here by JavaScript -->
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="about.html">O projektu</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="tutorial-content">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Početna</a> &gt; <span>Osnovni pojmovi i tehnologija</span>
+        </div>
+
+        <h2>3. Osnovni pojmovi i tehnologija</h2>
+
+        <div class="tutorial-intro">
+          <p>
+            Dobrodošli u treći dio našeg vodiča gdje ćemo se upoznati s osnovnim pojmovima i tehnologijama koje čine temelj blockchain sustava. Kao i uvijek, objašnjavat ćemo kompleksne tehnološke koncepte kroz pravne analogije koje će vam pomoći da lakše razumijete ove često zbunjujuće teme.
+          </p>
+        </div>
+
+        <section class="tutorial-section">
+          <h3>Kriptografija: Pravni pečat digitalnog doba</h3>
+          
+          <p>
+            Kriptografija u blockchain tehnologiji je poput službenog pečata na pravnom dokumentu - ona osigurava autentičnost, integritet i nepromjenjivost podataka. Zamislite da svaka transakcija ima svoj jedinstveni "potpis suca" koji je nemoguće krivotvoriti.
+          </p>
+
+          <h4>Ključni kriptografski koncepti u blockchain tehnologiji:</h4>
+          
+          <div class="concept-box">
+            <h5>1. Kriptografske hash funkcije</h5>
+            <p>
+              Hash funkcije su poput pravnog sažetka dokumenta - uzimaju podatke bilo koje veličine i stvaraju jedinstveni "otisak" fiksne duljine. Ako se promijeni samo jedan znak u izvornom dokumentu, hash će biti potpuno drugačiji.
+            </p>
+            <p>
+              <strong>Pravna analogija:</strong> Zamislite da imate dokument od 100 stranica i umjesto da ga cijelog nosite sa sobom, napravite jedinstveni sažetak od jedne stranice koji savršeno predstavlja cijeli dokument. Ako netko promijeni samo jednu riječ u originalnom dokumentu, sažetak će biti potpuno drugačiji.
+            </p>
+          </div>
+
+          <div class="concept-box">
+            <h5>2. Asimetrična kriptografija (javni i privatni ključevi)</h5>
+            <p>
+              Blockchain koristi parove ključeva - privatni ključ (koji držite tajnim) i javni ključ (koji možete dijeliti). Ovo je temelj digitalnih potpisa i adresa novčanika.
+            </p>
+            <p>
+              <strong>Pravna analogija:</strong> Privatni ključ je poput vašeg osobnog potpisa ili pečata koji samo vi možete koristiti. Javni ključ je poput vašeg OIB-a ili adrese na koju vam ljudi mogu slati poštu, ali ne mogu se predstavljati kao vi.
+            </p>
+          </div>
+
+          <div class="concept-box">
+            <h5>3. Digitalni potpisi</h5>
+            <p>
+              Digitalni potpisi koriste privatne ključeve za "potpisivanje" transakcija, dokazujući da je vlasnik ključa autorizirao transakciju.
+            </p>
+            <p>
+              <strong>Pravna analogija:</strong> Kada potpišete ugovor pred javnim bilježnikom, bilježnik potvrđuje da ste to stvarno vi. U blockchainu, matematički algoritmi preuzimaju ulogu javnog bilježnika, potvrđujući autentičnost vašeg digitalnog potpisa bez potrebe za posrednikom.
+            </p>
+          </div>
+        </section>
+
+        <section class="tutorial-section">
+          <h3>Konsenzusni algoritmi: Digitalni sudski postupak</h3>
+          
+          <p>
+            Konsenzusni algoritmi su poput sudskog postupka u digitalnom svijetu - oni određuju kako se postiže dogovor o valjanosti transakcija kada ne postoji središnji autoritet. Različiti blockchain sustavi koriste različite "pravne procedure" za postizanje konsenzusa.
+          </p>
+
+          <h4>Najvažniji konsenzusni algoritmi:</h4>
+          
+          <div class="concept-box">
+            <h5>1. Proof-of-Work (PoW)</h5>
+            <p>
+              PoW zahtijeva da računala rješavaju složene matematičke zagonetke kako bi dodala novi blok u blockchain. Ovo je energetski intenzivan proces.
+            </p>
+            <p>
+              <strong>Pravna analogija:</strong> Zamislite da za svaki novi slučaj na sudu, odvjetnici moraju riješiti složenu pravnu zagonetku koja zahtijeva mnogo vremena i resursa. Prvi odvjetnik koji riješi zagonetku dobiva pravo predstaviti slučaj pred sudom, a svi ostali odvjetnici mogu lako provjeriti je li rješenje točno.
+            </p>
+            <p>
+              <strong>Primjer:</strong> Bitcoin i Ethereum (prije prelaska na PoS) koriste PoW.
+            </p>
+          </div>
+
+          <div class="concept-box">
+            <h5>2. Proof-of-Stake (PoS)</h5>
+            <p>
+              PoS odabire validatore na temelju količine kriptovalute koju su spremni "založiti" kao jamstvo. Ovo je energetski učinkovitija alternativa PoW-u.
+            </p>
+            <p>
+              <strong>Pravna analogija:</strong> Zamislite sustav gdje suci moraju položiti značajnu kauciju kako bi mogli sudjelovati u donošenju presuda. Što je veća kaucija, veća je vjerojatnost da će biti odabrani za predsjedavanje važnim slučajevima. Ako sudac donese nepravednu presudu, gubi svoju kauciju.
+            </p>
+            <p>
+              <strong>Primjer:</strong> Ethereum 2.0, Cardano, Solana i Polkadot koriste različite varijante PoS-a.
+            </p>
+          </div>
+
+          <div class="concept-box">
+            <h5>3. Delegated Proof-of-Stake (DPoS)</h5>
+            <p>
+              DPoS je varijanta PoS-a gdje vlasnici tokena glasaju za "delegate" koji će validirati transakcije u njihovo ime.
+            </p>
+            <p>
+              <strong>Pravna analogija:</strong> Ovo je poput predstavničke demokracije gdje građani biraju zastupnike koji će donositi zakone u njihovo ime. Ako zastupnici ne rade svoj posao kako treba, mogu biti smijenjeni na sljedećim izborima.
+            </p>
+            <p>
+              <strong>Primjer:</strong> EOS, TRON i BitShares koriste DPoS.
+            </p>
+          </div>
+
+          <div class="concept-box">
+            <h5>4. Proof-of-Authority (PoA)</h5>
+            <p>
+              PoA se oslanja na reputaciju validatora umjesto na njihov ulog. Validatori su poznati entiteti koji riskiraju svoju reputaciju.
+            </p>
+            <p>
+              <strong>Pravna analogija:</strong> Ovo je poput sustava gdje samo suci s dugogodišnjim iskustvom i besprijekornom reputacijom mogu donositi presude u važnim slučajevima. Njihov identitet je javno poznat, i oni riskiraju svoju profesionalnu reputaciju sa svakom presudom koju donesu.
+            </p>
+            <p>
+              <strong>Primjer:</strong> VeChain i mnogi privatni blockchain sustavi koriste PoA.
+            </p>
+          </div>
+        </section>
+
+        <section class="tutorial-section">
+          <h3>Distribuirani čvorovi i pametni ugovori: Decentralizirani pravni sustav</h3>
+          
+          <p>
+            Distribuirani čvorovi i pametni ugovori predstavljaju revolucionarni koncept u blockchain tehnologiji koji transformira način na koji razmišljamo o izvršavanju ugovora i pohranjivanju podataka.
+          </p>
+
+          <h4>Distribuirani čvorovi: Mreža digitalnih javnih bilježnika</h4>
+          
+          <div class="concept-box">
+            <h5>Što su distribuirani čvorovi?</h5>
+            <p>
+              Distribuirani čvorovi su računala koja održavaju kopiju blockchaina i sudjeluju u procesu validacije transakcija. Svaki čvor ima potpunu kopiju cijelog lanca i provjerava svaku novu transakciju.
+            </p>
+            <p>
+              <strong>Pravna analogija:</strong> Zamislite da umjesto jednog centralnog zemljišnog registra, svaki javni bilježnik u državi ima identičnu kopiju cijelog registra. Kada se dogodi nova transakcija, svi bilježnici je istovremeno zapisuju u svoje kopije. Ako netko pokuša falsificirati jedan registar, svi ostali bilježnici će odmah uočiti nepodudaranje.
+            </p>
+          </div>
+
+          <div class="concept-box">
+            <h5>Zašto su distribuirani čvorovi važni?</h5>
+            <p>
+              <strong>1. Otpornost na cenzuru:</strong> Budući da ne postoji središnja točka kontrole, gotovo je nemoguće ugasiti blockchain mrežu.
+            </p>
+            <p>
+              <strong>2. Sigurnost podataka:</strong> Podaci su sigurni jer su pohranjeni na tisućama računala diljem svijeta.
+            </p>
+            <p>
+              <strong>3. Transparentnost:</strong> Svaka transakcija je vidljiva svima i ne može se mijenjati bez konsenzusa većine mreže.
+            </p>
+          </div>
+
+          <h4>Pametni ugovori: Samoizvršavajući pravni dokumenti</h4>
+          
+          <div class="concept-box">
+            <h5>Što su pametni ugovori?</h5>
+            <p>
+              Pametni ugovori su samoizvršavajući programi pohranjeni na blockchainu koji se automatski izvršavaju kada su ispunjeni unaprijed definirani uvjeti.
+            </p>
+            <p>
+              <strong>Pravna analogija:</strong> Zamislite ugovor koji ne samo da definira uvjete, već ih i automatski provodi. Na primjer, ugovor o najmu koji automatski prebacuje novac s računa najmoprimca na račun najmodavca svakog prvog u mjesecu, a ako nema dovoljno sredstava, automatski šalje obavijest o kršenju ugovora.
+            </p>
+          </div>
+
+          <div class="concept-box">
+            <h5>Zašto su pametni ugovori važni?</h5>
+            <p>
+              <strong>1. Eliminacija posrednika:</strong> Nema potrebe za posrednicima poput odvjetnika ili javnih bilježnika za izvršavanje jednostavnih ugovora.
+            </p>
+            <p>
+              <strong>2. Smanjenje troškova:</strong> Automatizacija smanjuje troškove povezane s izvršavanjem ugovora.
+            </p>
+            <p>
+              <strong>3. Preciznost:</strong> Eliminira se ljudska pogreška i različite interpretacije ugovornih odredbi.
+            </p>
+            <p>
+              <strong>4. Transparentnost:</strong> Svi uvjeti ugovora su javni i nepromjenjivi nakon što je ugovor postavljen na blockchain.
+            </p>
+          </div>
+
+          <div class="concept-box">
+            <h5>Pravni izazovi pametnih ugovora</h5>
+            <p>
+              Iako pametni ugovori nude brojne prednosti, oni također predstavljaju izazove za tradicionalni pravni sustav:
+            </p>
+            <p>
+              <strong>1. Nepromjenjivost:</strong> Jednom kada je pametni ugovor postavljen, ne može se mijenjati - što znači da se pogreške u kodu ne mogu lako ispraviti.
+            </p>
+            <p>
+              <strong>2. Pravna nadležnost:</strong> Nejasno je koji pravni sustav ima nadležnost nad pametnim ugovorima koji djeluju globalno.
+            </p>
+            <p>
+              <strong>3. Odgovornost:</strong> Tko je odgovoran ako pametni ugovor ne funkcionira kako je predviđeno - programer, korisnik ili platforma?
+            </p>
+          </div>
+        </section>
+
+        <div class="tutorial-conclusion">
+          <h3>Zaključak</h3>
+          <p>
+            Kriptografija, konsenzusni algoritmi, distribuirani čvorovi i pametni ugovori čine temeljne stupove blockchain tehnologije. Razumijevanje ovih koncepata ključno je za shvaćanje kako blockchain sustavi funkcioniraju i zašto predstavljaju revoluciju u načinu na koji razmišljamo o digitalnim transakcijama, povjerenju i ugovorima.
+          </p>
+          <p>
+            U pravnom kontekstu, ove tehnologije otvaraju nove mogućnosti za automatizaciju i pojednostavljenje pravnih procesa, ali također postavljaju izazove za tradicionalne pravne okvire koji će se morati prilagoditi ovoj novoj digitalnoj stvarnosti.
+          </p>
+        </div>
+
+        <div class="tutorial-navigation">
+          <a href="tutorial-2.html" class="prev-tutorial">← Prethodni vodič: Kriptonovčanici</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 RARA - Sva prava pridržana</p>
+      </div>
+    </footer>
+  </body>
+</html>
