@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kviz - Provjeri znanje - RARA</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/faviparrot.gif" type="image/gif" />
+    <script src="js/new-animation.js" defer></script>
+    <script src="js/back-to-top.js" defer></script>
+    <script src="js/dropdown-menu.js" defer></script>
+    <script src="js/quiz.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <!-- Animation will be inserted here by JavaScript -->
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="about.html">O projektu</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Vodič za početnike</a>
+              <div class="dropdown-content">
+                <a href="tutorial-1.html">1. Uvod u blockchain</a>
+                <a href="tutorial-2.html">2. Kako funkcioniraju kriptovalute</a>
+                <a href="tutorial-3.html">3. Novčanici za kriptovalute</a>
+                <a href="tutorial-4.html">4. Najpoznatije kriptovalute</a>
+                <a href="tutorial-5.html">5. Prednosti i izazovi kriptovaluta</a>
+                <a href="tutorial-6.html">6. Pravni i regulatorni okvir</a>
+                <a href="tutorial-7.html">7. Primjene blockchaina izvan financija</a>
+                <a href="tutorial-8.html">8. Praktični savjeti i upozorenja</a>
+                <a href="tutorial-9.html">9. Zaključak i budućnost</a>
+                <a href="tutorial-10.html">10. Kviz - Provjeri znanje</a>
+                <a href="tutorial-10.html">10. Kviz - Provjeri znanje</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="tutorial-content">
+        <h2>
+          10. Kviz - Provjeri znanje
+        </h2>
+
+        <div class="breadcrumbs">
+          <a href="index.html">Početna</a> &gt; <span>Kviz - Provjeri znanje</span>
+        </div>
+
+        <div class="tutorial-intro">
+          <p>
+            Dobrodošli u kviz gdje možete provjeriti svoje znanje o blockchain tehnologiji i kriptovalutama! Kviz sadrži pitanja iz svih devet dijelova našeg vodiča. Odaberite odgovor koji smatrate točnim za svako pitanje i na kraju ćete dobiti rezultat.
+          </p>
+        </div>
+
+        <div class="quiz-container">
+          <div id="quiz">
+            <div id="quiz-start-screen" class="quiz-step">
+              <div class="concept-box">
+                <h5>Upute za kviz</h5>
+                <p>
+                  Kviz sadrži pitanja iz svih dijelova vodiča o blockchain tehnologiji i kriptovalutama. Za svako pitanje odaberite jedan odgovor koji smatrate točnim. Na kraju kviza dobit ćete rezultat s brojem točnih odgovora.
+                </p>
+              </div>
+              <button id="start-quiz-btn" class="btn">Započni kviz</button>
+            </div>
+            
+            <div id="quiz-questions" class="quiz-step" style="display: none;">
+              <div id="question-container">
+                <!-- Questions will be inserted here by JavaScript -->
+              </div>
+              <div class="quiz-navigation">
+                <button id="prev-question" class="btn">Prethodno pitanje</button>
+                <span id="question-number">Pitanje 1 od 20</span>
+                <button id="next-question" class="btn">Sljedeće pitanje</button>
+              </div>
+            </div>
+            
+            <div id="quiz-results" class="quiz-step" style="display: none;">
+              <h3>Rezultati kviza</h3>
+              <div class="concept-box">
+                <h5>Vaš rezultat</h5>
+                <p id="quiz-score">Točnih odgovora: <span id="correct-answers">0</span> od <span id="total-questions">0</span></p>
+                <div id="score-percentage"></div>
+              </div>
+              <button id="restart-quiz-btn" class="btn">Ponovi kviz</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tutorial-navigation">
+          <a href="tutorial-9.html" class="prev-tutorial">← Prethodni vodič: Zaključak i budućnost</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 RARA - Sva prava pridržana</p>
+      </div>
+    </footer>
+  </body>
+</html>
