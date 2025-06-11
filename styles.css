@@ -325,19 +325,31 @@ nav a.active {
     color: white;
 }
 
-/* Tutorial content page */
-.content-page, .tutorial-content {
-    padding: 3rem 0;
+/* Wallet images styling */
+.wallet-image {
+  margin: 20px 0;
+  text-align: center;
 }
 
-.content-page .container {
-    max-width: 800px;
+.wallet-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .breadcrumbs {
     margin-bottom: 2rem;
     color: #777;
 }
+
+/* Tutorial content page */
+.content-page, .tutorial-content {
+    padding: 3rem 0;
+}
+.content-page .container, .tutorial-content .container {
+    max-width: 800px;
+}
+
 
 /* Responsive tutorial content */
 @media (max-width: 768px) {
