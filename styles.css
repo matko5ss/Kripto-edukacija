@@ -350,13 +350,15 @@ nav a.active {
 /* Responsive adjustments for wallet images */
 @media (max-width: 768px) {
   .wallet-image img {
+    width: 400px;
     max-width: 90%;
   }
 }
 
 @media (max-width: 576px) {
   .wallet-image img {
-    max-width: 80%;
+    width: 300px;
+    max-width: 100%;
   }
 }
 
