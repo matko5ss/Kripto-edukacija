@@ -381,11 +381,17 @@ nav a.active {
 /* Tutorial navigation styling */
 .tutorial-navigation {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  justify-content: space-between;
   margin-top: 40px;
   padding-top: 20px;
   border-top: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+  .tutorial-navigation {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 .prev-tutorial, .next-tutorial {
@@ -398,12 +404,18 @@ nav a.active {
   text-decoration: none;
   text-align: center;
   transition: all 0.3s ease;
-  width: 100%;
-  max-width: 400px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 5px auto;
+  margin: 5px 0;
   cursor: pointer;
   border: none;
+  min-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .prev-tutorial, .next-tutorial {
+    width: 100%;
+    max-width: 400px;
+  }
 }
 
 .prev-tutorial:hover, .next-tutorial:hover {
