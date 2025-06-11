@@ -347,6 +347,19 @@ nav a.active {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Responsive adjustments for wallet images */
+@media (max-width: 768px) {
+  .wallet-image img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .wallet-image img {
+    max-width: 80%;
+  }
+}
+
 .breadcrumbs {
     margin-bottom: 2rem;
     color: #777;
