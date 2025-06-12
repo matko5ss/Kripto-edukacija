@@ -802,8 +802,21 @@ footer {
     }
     
     nav li {
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    nav a {
+        font-size: 0.9rem;
+    }
+    
+    .dropdown-toggle {
+        font-size: 0.9rem;
+    }
+    
+    .dropdown-content a {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.75rem;
     }
     
     .hero {
