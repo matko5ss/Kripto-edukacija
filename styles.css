@@ -4,7 +4,7 @@
     --secondary-color: #a29bfe;
     --accent-color: #fd79a8;
     --text-color: #2d3436;
-    --light-bg: #f9f9f9;
+    --light-bg: #C1E1FB;
     --dark-bg: #2d3436;
     --border-radius: 8px;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -125,6 +125,10 @@ a:hover {
     color: var(--accent-color);
 }
 
+nav a:hover {
+    color: #fd79a8;
+}
+
 ul, ol {
     margin-bottom: 1.5rem;
     padding-left: 2rem;
@@ -132,7 +136,7 @@ ul, ol {
 
 /* Header */
 header {
-    background-color: white;
+    background-color: #5D78B7;
     box-shadow: var(--box-shadow);
     padding: 1rem 0;
     position: sticky;
@@ -163,6 +167,14 @@ header .logo {
     display: flex;
     align-items: center;
     margin-right: 2rem;
+}
+
+header .logo a {
+    color: #fd79a8;
+}
+
+.logo-text {
+    color: #fd79a8 !important;
 }
 
 header .logo img {
@@ -197,11 +209,12 @@ nav a {
     font-weight: 600;
     padding: 0.5rem;
     display: block;
+    color: #fd79a8;
 }
 
 nav a.active {
-    color: var(--accent-color);
-    border-bottom: 2px solid var(--accent-color);
+    color: #fd79a8;
+    border-bottom: 2px solid #fd79a8;
 }
 
 /* Dropdown Menu */
