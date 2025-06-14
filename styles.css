@@ -386,13 +386,22 @@ nav a.active {
     padding: 2rem 0;
 }
 
+.tutorials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
 .tutorial-card {
     background-color: white;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     transition: transform 0.3s ease;
+    width: calc(50% - 1rem);
+    box-sizing: border-box;
 }
 
 .tutorial-card:hover {
@@ -401,6 +410,8 @@ nav a.active {
 
 .tutorial-card h4 {
     color: var(--primary-color);
+    font-size: 18px;
+    margin-top: 0;
 }
 
 /* Responsive tutorials section */
@@ -411,6 +422,7 @@ nav a.active {
     
     .tutorial-card {
         padding: 1.5rem;
+        width: 100%;
     }
 }
 
