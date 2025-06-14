@@ -272,6 +272,8 @@ nav a.active {
         margin-top: 0.5rem;
         padding: 0;
         background-color: var(--light-bg);
+        max-height: 200px; /* Smaller max-height for mobile */
+        overflow-y: auto; /* Ensure scrolling works on mobile too */
     }
     
     .dropdown-content a {
