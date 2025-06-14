@@ -223,6 +223,8 @@ nav a.active {
     position: absolute;
     background-color: white;
     min-width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     z-index: 101;
@@ -240,6 +242,7 @@ nav a.active {
     display: block;
     text-align: left;
     transition: background-color 0.3s ease;
+    font-size: calc(1em - 4px);
 }
 
 .dropdown-content a:hover {
