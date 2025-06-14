@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Load confetti script
+    const confettiScript = document.createElement('script');
+    confettiScript.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js';
+    document.head.appendChild(confettiScript);
+    
+    // Define passing score threshold
+    const PASSING_SCORE = 16;
     // Quiz questions from all 9 tutorials
     const quizQuestions = [
         // Tutorial 1 - Uvod u blockchain
@@ -304,6 +311,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 option.classList.remove('selected');
             }
         });
+        
+        // Automatically advance to next question after a short delay
+        setTimeout(() => {
+            if (currentQuestionIndex < shuffledQuestions.length - 1) {
+                currentQuestionIndex++;
+                showQuestion(currentQuestionIndex);
+            } else {
+                showResults();
+            }
+        }, 500); // 500ms delay before advancing
     }
     
     // Calculate score
@@ -329,7 +346,52 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add percentage text
         const percentageText = document.createElement('p');
         percentageText.textContent = `Točnost: ${percentage.toFixed(1)}%`;
-        scorePercentage.after(percentageText);
+        
+        // Add pass/fail message
+        const passFailMessage = document.createElement('p');
+        if (score >= PASSING_SCORE) {
+            passFailMessage.innerHTML = `<strong style="color: #2ecc71">Čestitamo! Uspješno ste položili kviz!</strong>`;
+            
+            // Trigger confetti celebration if score is 16 or higher
+            if (typeof confetti === 'function') {
+                setTimeout(() => {
+                    const duration = 5 * 1000;
+                    const animationEnd = Date.now() + duration;
+                    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+                    function randomInRange(min, max) {
+                        return Math.random() * (max - min) + min;
+                    }
+
+                    const interval = setInterval(function() {
+                        const timeLeft = animationEnd - Date.now();
+
+                        if (timeLeft <= 0) {
+                            return clearInterval(interval);
+                        }
+
+                        const particleCount = 50 * (timeLeft / duration);
+                        
+                        // Use different colors
+                        confetti(Object.assign({}, defaults, { 
+                            particleCount, 
+                            origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+                            colors: ['#fd79a8', '#6c5ce7', '#a29bfe', '#00cec9']
+                        }));
+                        confetti(Object.assign({}, defaults, { 
+                            particleCount, 
+                            origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+                            colors: ['#fd79a8', '#6c5ce7', '#a29bfe', '#00cec9']
+                        }));
+                    }, 250);
+                }, 500);
+            }
+        } else {
+            passFailMessage.innerHTML = `<strong style="color: #e74c3c">Nažalost, niste položili kviz. Potrebno je minimalno ${PASSING_SCORE} točnih odgovora.</strong>`;
+        }
+        
+        scorePercentage.after(passFailMessage);
+        passFailMessage.after(percentageText);
         
         // Create review of answers
         const reviewContainer = document.createElement('div');
@@ -388,19 +450,20 @@ document.addEventListener('DOMContentLoaded', function() {
         initQuiz();
     });
     
-    prevButton.addEventListener('click', () => {
-        if (currentQuestionIndex > 0) {
-            currentQuestionIndex--;
-            showQuestion(currentQuestionIndex);
-        }
-    });
+    // Remove previous button functionality
+    prevButton.style.display = 'none'; // Hide the previous button
     
     nextButton.addEventListener('click', () => {
-        if (currentQuestionIndex < shuffledQuestions.length - 1) {
-            currentQuestionIndex++;
-            showQuestion(currentQuestionIndex);
+        // Only allow going to next question if user has selected an answer
+        if (userAnswers[currentQuestionIndex] !== null) {
+            if (currentQuestionIndex < shuffledQuestions.length - 1) {
+                currentQuestionIndex++;
+                showQuestion(currentQuestionIndex);
+            } else {
+                showResults();
+            }
         } else {
-            showResults();
+            alert('Molimo odaberite odgovor prije nastavka.');
         }
     });
     
