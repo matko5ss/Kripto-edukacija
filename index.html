@@ -11,6 +11,7 @@
     <script src="js/dropdown-menu.js" defer></script>
     <script src="js/dropdown-delay.js" defer></script>
     <script src="js/active-page.js" defer></script>
+    <script src="js/level-toggle.js" defer></script>
   </head>
   <body>
     <header>
@@ -67,7 +68,12 @@
 
       <section class="tutorials">
         <h3>Praktični vodiči</h3>
-        <div class="tutorial-cards-container">
+        <div class="level-card" id="level-1-card">
+          <h4>Nivo 1</h4>
+          <button class="toggle-btn" id="toggle-level-1">Prikaži sadržaj</button>
+        </div>
+        
+        <div class="tutorial-cards-container" id="level-1-content">
           <div class="tutorial-card">
             <h4>
               1.Osnove blockchain tehnologije i kako funkcioniraju kriptovalute.
@@ -146,6 +152,103 @@
             </h4>
 
             <a href="tutorial-10.html" class="btn">Započni kviz</a>
+          </div>
+        </div>
+        
+        <div class="level-card" id="level-2-card">
+          <h4>Nivo 2</h4>
+          <button class="toggle-btn" id="toggle-level-2">Prikaži sadržaj</button>
+        </div>
+        
+        <div class="tutorial-cards-container" id="level-2-content">
+          <div class="tutorial-card">
+            <h4>1. Kako odabrati sigurnu kripto burzu</h4>
+            <ul>
+              <li>Pregled najpoznatijih burzi (centralizirane i decentralizirane)</li>
+              <li>Kriteriji za odabir pouzdane platforme</li>
+              <li>Osnove registracije i verifikacije</li>
+            </ul>
+            <a href="nivo2-1.html" class="btn">Pogledaj sadržaj</a>
+          </div>
+          
+          <div class="tutorial-card">
+            <h4>2. Kupnja i prodaja kriptovaluta</h4>
+            <ul>
+              <li>Proces otvaranja naloga, depozit i podizanje sredstava</li>
+              <li>Market i limit narudžbe</li>
+              <li>Praktični savjeti za trgovanje</li>
+            </ul>
+            <a href="nivo2-2.html" class="btn">Pogledaj sadržaj</a>
+          </div>
+          
+          <div class="tutorial-card">
+            <h4>3. Kreiranje i upravljanje kripto novčanikom</h4>
+            <ul>
+              <li>Vrste novčanika (hot, cold, softverski, hardverski)</li>
+              <li>Postavljanje popularnih novčanika (MetaMask, Trust Wallet, Ledger)</li>
+              <li>Sigurnost i backup (seed phrase, privatni ključ)</li>
+            </ul>
+            <a href="nivo2-3.html" class="btn">Pogledaj sadržaj</a>
+          </div>
+          
+          <div class="tutorial-card">
+            <h4>4. Sigurnosne prakse i zaštita od prijevara</h4>
+            <ul>
+              <li>Prepoznavanje phishinga i prevara</li>
+              <li>Dvofaktorska autentifikacija (2FA)</li>
+              <li>Redovno ažuriranje softvera i osiguranje uređaja</li>
+            </ul>
+            <a href="nivo2-4.html" class="btn">Pogledaj sadržaj</a>
+          </div>
+          
+          <div class="tutorial-card">
+            <h4>5. Slanje i primanje kriptovaluta</h4>
+            <ul>
+              <li>Kako izvršiti transakciju</li>
+              <li>Provjera adrese i mrežnih naknada</li>
+              <li>Praćenje statusa transakcije</li>
+            </ul>
+            <a href="nivo2-5.html" class="btn">Pogledaj sadržaj</a>
+          </div>
+          
+          <div class="tutorial-card">
+            <h4>6. Korištenje blockchain explorera</h4>
+            <ul>
+              <li>Objašnjenje blockchain explorera (Etherscan, Blockstream)</li>
+              <li>Pretraživanje transakcija i praćenje stanja novčanika</li>
+              <li>Analiza pametnih ugovora i tokena</li>
+            </ul>
+            <a href="nivo2-6.html" class="btn">Pogledaj sadržaj</a>
+          </div>
+          
+          <div class="tutorial-card">
+            <h4>7. Uvod u decentralizirane financije (DeFi)</h4>
+            <ul>
+              <li>Što je DeFi i zašto je važan</li>
+              <li>Osnovni DeFi proizvodi (lending, staking, yield farming)</li>
+              <li>Sigurnost i rizici DeFi platformi</li>
+            </ul>
+            <a href="nivo2-7.html" class="btn">Pogledaj sadržaj</a>
+          </div>
+          
+          <div class="tutorial-card">
+            <h4>8. NFT-i i digitalna imovina</h4>
+            <ul>
+              <li>Što su NFT-i i kako funkcioniraju</li>
+              <li>Kupnja, prodaja i pohrana NFT-a</li>
+              <li>Praktični primjeri i trendovi</li>
+            </ul>
+            <a href="nivo2-8.html" class="btn">Pogledaj sadržaj</a>
+          </div>
+          
+          <div class="tutorial-card">
+            <h4>9. Porez i regulatorni okvir</h4>
+            <ul>
+              <li>Osnovne porezne obveze za korisnike kriptovaluta</li>
+              <li>Praćenje transakcija za porezne svrhe</li>
+              <li>Najnoviji pravni okviri i obveze u Hrvatskoj i EU</li>
+            </ul>
+            <a href="nivo2-9.html" class="btn">Pogledaj sadržaj</a>
           </div>
         </div>
       </section>

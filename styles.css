@@ -413,6 +413,75 @@ nav a.active {
   width: 100%;
 }
 
+/* Level card styling */
+.level-card {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.level-card:hover {
+  background-color: #006094;
+}
+
+.level-card h4 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.toggle-btn {
+  background-color: white;
+  color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Initially hide the tutorial cards */
+#level-1-content,
+#level-2-content {
+  display: none;
+}
+
+/* When active, show the tutorial cards */
+#level-1-content.active,
+#level-2-content.active {
+  display: flex;
+}
+
+/* Style for the list items in Nivo 2 cards */
+.tutorial-card ul {
+  padding-left: 1.2rem;
+  margin: 0.8rem 0;
+  color: #333;
+}
+
+.tutorial-card li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Add some space between levels */
+#level-2-card {
+  margin-top: 2rem;
+}
+
 .tutorials .tutorial-cards-container {
   display: flex;
   flex-wrap: wrap;
