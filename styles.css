@@ -452,6 +452,21 @@ nav a.active {
   background-color: #e0e0e0;
 }
 
+.coming-soon-message {
+  width: 100%;
+  text-align: center;
+  padding: 3rem;
+  background-color: #f5f5f5;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.coming-soon-message h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
 /* Initially hide the tutorial cards */
 #level-1-content,
 #level-2-content {
