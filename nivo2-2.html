@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Kako kreirati i koristiti kripto novčanik (wallet)</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/faviparrot.gif" type="image/gif" />
+    <script src="js/new-animation.js" defer></script>
+    <script src="js/back-to-top.js" defer></script>
+    <script src="js/dropdown-menu.js" defer></script>
+    <script src="js/dropdown-delay.js" defer></script>
+    <script src="js/active-page.js" defer></script>
+    <script src="js/level-toggle.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo" id="parrot-lawyer-container">
+          <!-- Interactive parrot will be inserted here by JavaScript -->
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Početna</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Vodič</a>
+              <div class="dropdown-content">
+                <a href="tutorial-1.html">1. Uvod u blockchain</a>
+                <a href="tutorial-2.html">2. Kako funkcioniraju kriptovalute</a>
+                <a href="tutorial-3.html">3. Novčanici za kriptovalute</a>
+                <a href="tutorial-4.html">4. Najpoznatije kriptovalute</a>
+                <a href="tutorial-5.html">5. Prednosti i izazovi kriptovaluta</a>
+                <a href="tutorial-6.html">6. Pravni i regulatorni okvir</a>
+                <a href="tutorial-7.html">7. Primjene blockchaina izvan financija</a>
+                <a href="tutorial-8.html">8. Praktični savjeti i upozorenja</a>
+                <a href="tutorial-9.html">9. Zaključak i budućnost</a>
+                <a href="tutorial-10.html">10. Kviz - Provjeri znanje</a>
+              </div>
+            </li>
+            <li><a href="about.html">O projektu</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="tutorial-content">
+        <h2>2. Kako kreirati i koristiti kripto novčanik (wallet)</h2>
+
+        <div class="breadcrumbs">
+          <a href="index.html">Početna</a> &gt; Kako kreirati i koristiti kripto novčanik (wallet)
+        </div>
+
+        <article>
+          <h3>Vrste novčanika</h3>
+          <p>
+            Kripto novčanici dijele se na dvije glavne vrste: hot (topli) i cold (hladni) novčanici, a unutar tih kategorija postoje softverski i hardverski novčanici. Također, važna je i podjela na custodial (novčanici s trećom stranom) i non-custodial (novčanici pod vašom kontrolom):
+          </p>
+
+          <div class="concept-box">
+            <h4>Hot wallet (topli novčanik):</h4>
+            <ul>
+              <li>Softverski novčanici (npr. Exodus, MetaMask, Trust Wallet)</li>
+              <li>Web-walleti (novčanici dostupni preko preglednika)</li>
+              <li>Mobilni novčanici (aplikacije za pametne telefone)</li>
+            </ul>
+            <p><strong>Značajke:</strong> Uvijek su povezani na internet, jednostavni za korištenje, brz pristup sredstvima, ali manje sigurni zbog izloženosti mogućim napadima.</p>
+          </div>
+
+          <div class="concept-box">
+            <h4>Cold wallet (hladni novčanik):</h4>
+            <ul>
+              <li>Hardverski novčanici (npr. Trezor, Ledger)</li>
+              <li>Papirnati novčanici (public/private key ispisan na papiru)</li>
+            </ul>
+            <p><strong>Značajke:</strong> Sredstva su offline, izuzetno sigurna za dugoročno čuvanje, manje pogodni za česte transakcije.</p>
+          </div>
+
+          <div class="concept-box">
+            <h4>Custodial wallet:</h4>
+            <p>Treća strana (obično burza) čuva vaše ključeve i upravlja vašim sredstvima.</p>
+          </div>
+
+          <div class="concept-box">
+            <h4>Non-custodial wallet:</h4>
+            <p>Vi upravljate svojim ključevima i sami ste odgovorni za sigurnost.</p>
+          </div>
+
+          <h3>Praktični vodič za kreiranje novčanika</h3>
+          
+          <h4>Hardware wallet (Trezor, Ledger) – korak po korak</h4>
+          <p>
+            Hardverski novčanici su najsigurnija opcija za čuvanje većih iznosa kriptovaluta. Evo kako ih postaviti:
+          </p>
+
+          <ol class="process-steps">
+            <li>
+              <strong>Kupnja i provjera uređaja</strong>
+              <ul>
+                <li>Kupite uređaj samo s službene stranice (npr. trezor.io ili ledger.com).</li>
+                <li>Provjerite da li je paket zapečaćen i da nije oštećen.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Preuzimanje aplikacije</strong>
+              <ul>
+                <li>Trezor: Preuzmite Trezor Suite s službene stranice.</li>
+                <li>Ledger: Preuzmite Ledger Live aplikaciju s službene stranice.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Povezivanje i instalacija</strong>
+              <ul>
+                <li>Povežite uređaj s računalom preko USB-a.</li>
+                <li>Slijedite upute za instalaciju firmware-a ili ažuriranje operacijskog sustava.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Kreiranje novog novčanika</strong>
+              <ul>
+                <li>Odaberite opciju "Create new wallet".</li>
+                <li>Zapamtite ili zapišite seed phrase (12 ili 24 riječi) koji vam uređaj generira.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Postavljanje PIN-a</strong>
+              <ul>
+                <li>Postavite PIN za dodatnu zaštitu.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Spremanje seed phrase-a</strong>
+              <ul>
+                <li>Zapišite seed phrase na papiru i spremite na sigurno mjesto.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Verifikacija seed phrase-a</strong>
+              <ul>
+                <li>Potvrdite da ste ispravno zabilježili seed phrase ponovnim unosom riječi na uređaju.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Konfiguracija i korištenje</strong>
+              <ul>
+                <li>Dodajte željene kriptovalute i počnite upravljati svojim sredstvima.</li>
+                <li>Napravite testnu transakciju kako biste provjerili da li sve funkcionira.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <p>
+            <strong>Video tutoriali:</strong>
+          </p>
+          <ul>
+            <li>Trezor Model One Setup – YouTube tutorial</li>
+            <li>Ledger Stax Full Beginners Guide – YouTube tutorial</li>
+          </ul>
+
+          <h4>Softverski novčanici (Exodus, MetaMask, Trust Wallet) – korak po korak</h4>
+          
+          <div class="wallet-section">
+            <h5>Exodus Wallet:</h5>
+            <ol class="process-steps">
+              <li>
+                <strong>Preuzimanje aplikacije</strong>
+                <ul>
+                  <li>Preuzmite Exodus aplikaciju s Google Play ili App Store.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Kreiranje novčanika</strong>
+                <ul>
+                  <li>Otvorite aplikaciju i odaberite "Create new wallet".</li>
+                  <li>Zapišite seed phrase (12 riječi) koji vam aplikacija generira.</li>
+                  <li>Označite redoslijed riječi i pohranite ih na sigurno mjesto.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Sigurnosni PIN</strong>
+                <ul>
+                  <li>Postavite PIN ili koristite biometriju za dodatnu zaštitu.</li>
+                </ul>
+              </li>
+            </ol>
+            <p>Video tutorial: Exodus Wallet Tutorial – YouTube</p>
+          </div>
+
+          <div class="wallet-section">
+            <h5>MetaMask:</h5>
+            <ol class="process-steps">
+              <li>
+                <strong>Preuzimanje i instalacija</strong>
+                <ul>
+                  <li>Instalirajte MetaMask kao proširenje za preglednik ili mobilnu aplikaciju.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Kreiranje novčanika</strong>
+                <ul>
+                  <li>Odaberite "Create new wallet".</li>
+                  <li>Zapišite seed phrase (12 riječi) i pohranite ih na sigurno mjesto.</li>
+                  <li>Postavite lozinku za pristup proširenju.</li>
+                </ul>
+              </li>
+            </ol>
+            <p>Vodič: MetaMask Tutorial for Beginners – Cointelegraph</p>
+          </div>
+
+          <div class="wallet-section">
+            <h5>Trust Wallet:</h5>
+            <ol class="process-steps">
+              <li>
+                <strong>Preuzimanje aplikacije</strong>
+                <ul>
+                  <li>Preuzmite aplikaciju s Google Play ili App Store.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Kreiranje novčanika</strong>
+                <ul>
+                  <li>Odaberite "Create a new wallet".</li>
+                  <li>Zapišite seed phrase (12 riječi) i pohranite ih na sigurno mjesto.</li>
+                  <li>Postavite PIN ili biometriju za dodatnu zaštitu.</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <h3>Sigurnost i backup</h3>
+          
+          <div class="security-section">
+            <h4>Seed phrase (sigurnosna fraza):</h4>
+            <ul>
+              <li>Seed phrase je ključ za pristup vašem novčaniku. Ako izgubite uređaj ili zaboravite lozinku, samo pomoću seed phrasea možete vratiti pristup sredstvima.</li>
+              <li>Nikad nemojte dijeliti seed phrase niti ga pohranjujte digitalno (osim ako je šifriran i pohranjen offline).</li>
+              <li>Najbolje je napraviti više papirnatih kopija i pohraniti ih na sigurnim mjestima (npr. sef, banka, kod obitelji).</li>
+            </ul>
+          </div>
+
+          <div class="security-section">
+            <h4>Privatni ključevi:</h4>
+            <ul>
+              <li>Privatni ključ je digitalni potpis za vaše transakcije. Ako ga netko ukrade, može preuzeti kontrolu nad vašim sredstvima.</li>
+              <li>Nikad nemojte dijeliti privatni ključ.</li>
+            </ul>
+          </div>
+
+          <div class="security-section">
+            <h4>iCloud/Google Drive backup:</h4>
+            <ul>
+              <li>Neki novčanici (npr. Trust Wallet) omogućuju pohranu seed phrasea na iCloud ili Google Drive, ali to nije preporučljivo zbog mogućeg hakiranja.</li>
+              <li>Koristite cloud backup samo ako ste svjesni rizika i ako je šifriran.</li>
+            </ul>
+          </div>
+
+          <h3>Slanje i primanje kriptovaluta</h3>
+          
+          <div class="transaction-section">
+            <h4>Primanje kriptovaluta:</h4>
+            <ol>
+              <li>Otvorite novčanik i odaberite opciju "Receive" ili "Primi".</li>
+              <li>Kopirajte svoju adresu (niz slova i brojeva) ili skenirajte QR kod.</li>
+              <li>Pošaljite adresu pošiljatelju.</li>
+            </ol>
+          </div>
+
+          <div class="transaction-section">
+            <h4>Slanje kriptovaluta:</h4>
+            <ol>
+              <li>Odaberite opciju "Send" ili "Pošalji".</li>
+              <li>Unesite adresu primatelja (provjerite da li je točna!).</li>
+              <li>Odaberite iznos i potvrdite transakciju.</li>
+            </ol>
+            <p><strong>Provjerite mrežne naknade:</strong> Svaka transakcija na blockchainu ima mrežnu naknadu koja ovisi o opterećenosti mreže i vrsti kriptovalute.</p>
+            <p><strong>Provjerite adresu:</strong> Transakcije su nepovratne, pa uvijek dvaput provjerite adresu primatelja.</p>
+          </div>
+
+          <div class="transaction-section">
+            <h4>Praćenje transakcije:</h4>
+            <p>Transakciju možete pratiti na blockchain explorerima (npr. Etherscan za Ethereum, Blockstream za Bitcoin).</p>
+          </div>
+        </article>
+
+        <div class="tutorial-navigation">
+          <a href="nivo2-1.html" class="prev-tutorial">← Prethodni vodič: Kako odabrati sigurnu kripto burzu</a>
+          <a href="nivo2-3.html" class="next-tutorial">Sljedeći vodič: Sigurnosne prakse i zaštita od prijevara →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 RARA. Sva prava pridržana.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
