@@ -1,10 +1,10 @@
 /* Base styles */
 :root {
-  --primary-color: #0077B6;
-  --secondary-color: #48CAE4;
-  --accent-color: #00B4D8;
+  --primary-color: #0077b6;
+  --secondary-color: #48cae4;
+  --accent-color: #00b4d8;
   --text-color: #2d3436;
-  --light-bg: #E5F6FA;
+  --light-bg: #e5f6fa;
   --dark-bg: #2d3436;
   --border-radius: 8px;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -131,7 +131,7 @@ a:hover {
 }
 
 nav a:hover {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 ul,
@@ -215,12 +215,12 @@ nav a {
   font-weight: 600;
   padding: 0.5rem;
   display: block;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 nav a.active {
-  color: #FFFFFF;
-  border-bottom: 2px solid #FFFFFF;
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
 }
 
 /* Dropdown Menu */
@@ -257,7 +257,7 @@ nav a.active {
 }
 
 .dropdown-content a.active {
-  color: #0077B6;
+  color: #0077b6;
   font-weight: 600;
 }
 
@@ -351,7 +351,7 @@ nav a.active {
 .hero {
   padding: 4rem 0;
   text-align: center;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: white;
   border-radius: var(--border-radius);
   margin: 2rem 0;
@@ -505,7 +505,7 @@ nav a.active {
 }
 
 .tutorial-card {
-  background-color: #EBF7FA;
+  background-color: #ebf7fa;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 2rem;
@@ -602,7 +602,7 @@ nav a.active {
 
 /* Concept box styling */
 .concept-box {
-  background-color: #EBF7FA;
+  background-color: #ebf7fa;
   border-left: 4px solid var(--primary-color);
   padding: 15px 20px;
   margin: 20px 0;
