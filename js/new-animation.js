@@ -1,6 +1,6 @@
 /**
  * New Animation Implementation
- * Displays the animation from Animations folder with RARA text below
+ * Displays the graduation cap animation in the header
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
   homeLink.className = 'home-link';
   homeLink.title = 'Povratak na početnu stranicu';
   
-  // Create container for animation and text
+  // Create container for animation
   const logoContainer = document.createElement('div');
   logoContainer.className = 'logo-container';
   
@@ -26,14 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
   animationContainer.id = 'lottie-container';
   animationContainer.className = 'lottie-container';
   
-  // Create text element
-  const logoText = document.createElement('div');
-  logoText.className = 'logo-text';
-  logoText.textContent = 'RARA';
-  
   // Add elements to the page
   logoContainer.appendChild(animationContainer);
-  logoContainer.appendChild(logoText);
   homeLink.appendChild(logoContainer);
   logoDiv.appendChild(homeLink);
   
@@ -68,27 +62,21 @@ document.addEventListener('DOMContentLoaded', function() {
       margin-bottom: 5px;
       overflow: visible;
     }
-    
-    .logo-text {
-      font-size: 18px;
-      font-weight: bold;
-      color: var(--primary-color);
-      letter-spacing: 1px;
-    }
   `;
   document.head.appendChild(style);
   
-  // Load the Lottie script
+  // Load Lottie library and initialize animation
   const script = document.createElement('script');
-  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js';
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js';
+  
   script.onload = function() {
     // Initialize the animation after the script is loaded
-    const animation = bodymovin.loadAnimation({
+    const animation = lottie.loadAnimation({
       container: document.getElementById('lottie-container'),
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      path: 'Animations/Animation - 1749551213760.json'
+      path: './Animations/graduation-cap.json'
     });
     
     // Log success or failure

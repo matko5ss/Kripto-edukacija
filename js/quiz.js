@@ -232,8 +232,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const questionsScreen = document.getElementById('quiz-questions');
     const resultsScreen = document.getElementById('quiz-results');
     const startButton = document.getElementById('start-quiz-btn');
-    const prevButton = document.getElementById('prev-question');
-    const nextButton = document.getElementById('next-question');
     const questionContainer = document.getElementById('question-container');
     const questionNumber = document.getElementById('question-number');
     const correctAnswers = document.getElementById('correct-answers');
@@ -241,10 +239,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const scorePercentage = document.getElementById('score-percentage');
     const restartButton = document.getElementById('restart-quiz-btn');
     
-    // Quiz state
-    let currentQuestionIndex = 0;
-    let userAnswers = [];
-    let shuffledQuestions = [];
+    // Quiz state - expose variables for countdown-timer.js
+    window.currentQuestionIndex = 0;
+    window.userAnswers = [];
+    window.shuffledQuestions = [];
+    
+    // Local references for convenience
+    let currentQuestionIndex = window.currentQuestionIndex;
+    let userAnswers = window.userAnswers;
+    let shuffledQuestions = window.shuffledQuestions;
     
     // Initialize quiz
     function initQuiz() {
@@ -262,8 +265,9 @@ document.addEventListener('DOMContentLoaded', function() {
         showQuestion(currentQuestionIndex);
     }
     
-    // Show question
-    function showQuestion(index) {
+    // Show question - exposed for countdown-timer.js
+    window.showQuestion = function(index) {
+        console.log('Showing question', index + 1);
         const question = shuffledQuestions[index];
         questionContainer.innerHTML = '';
         
@@ -293,13 +297,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update question number
         questionNumber.textContent = `Pitanje ${index + 1} od ${shuffledQuestions.length}`;
         
-        // Update navigation buttons
-        prevButton.disabled = index === 0;
-        nextButton.textContent = index === shuffledQuestions.length - 1 ? 'Završi kviz' : 'Sljedeće pitanje';
+        // Update local reference
+        currentQuestionIndex = index;
     }
     
-    // Select option
-    function selectOption(questionIndex, optionIndex) {
+    // Select option - automatically advances to next question
+    window.selectOption = function(questionIndex, optionIndex) {
         userAnswers[questionIndex] = optionIndex;
         
         // Update UI to show selected option
@@ -312,16 +315,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Automatically advance to next question after a short delay
+        // Wait a brief moment to show the selection before advancing
         setTimeout(() => {
-            if (currentQuestionIndex < shuffledQuestions.length - 1) {
-                currentQuestionIndex++;
+            // Check if this is the last question
+            if (questionIndex < shuffledQuestions.length - 1) {
+                // Move to next question
+                currentQuestionIndex = questionIndex + 1;
+                window.currentQuestionIndex = currentQuestionIndex;
                 showQuestion(currentQuestionIndex);
+                // Timer will be reset by the showQuestion function
             } else {
-                showResults();
+                // Show results if this was the last question
+                window.showResults();
             }
-        }, 500); // 500ms delay before advancing
-    }
+        }, 300); // Short delay to show the selection
+    };
     
     // Calculate score
     function calculateScore() {
@@ -334,8 +342,8 @@ document.addEventListener('DOMContentLoaded', function() {
         return score;
     }
     
-    // Show results
-    function showResults() {
+    // Show results - exposed to be used by countdown-timer.js
+    window.showResults = function() {
         const score = calculateScore();
         correctAnswers.textContent = score;
         
@@ -401,9 +409,13 @@ document.addEventListener('DOMContentLoaded', function() {
         shuffledQuestions.forEach((question, index) => {
             const userAnswer = userAnswers[index];
             const isCorrect = userAnswer === question.correctAnswer;
+            const isUnanswered = userAnswer === null;
             
             const questionReview = document.createElement('div');
             questionReview.className = `question-review ${isCorrect ? 'correct' : 'incorrect'}`;
+            if (isUnanswered) {
+                questionReview.classList.add('unanswered');
+            }
             
             // Question text
             const questionText = document.createElement('p');
@@ -420,11 +432,11 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 const userAnswerText = document.createElement('p');
                 userAnswerText.className = 'user-answer';
-                userAnswerText.innerHTML = `<span class="incorrect-text">Niste odgovorili na ovo pitanje</span>`;
+                userAnswerText.innerHTML = `<span class="unanswered-text">Nije odgovoreno - vrijeme je isteklo</span>`;
                 questionReview.appendChild(userAnswerText);
             }
             
-            // Correct answer (only show if user was wrong)
+            // Correct answer (only show if user was wrong or didn't answer)
             if (!isCorrect) {
                 const correctAnswerText = document.createElement('p');
                 correctAnswerText.className = 'correct-answer';
@@ -453,19 +465,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Remove previous button functionality
     prevButton.style.display = 'none'; // Hide the previous button
     
-    nextButton.addEventListener('click', () => {
-        // Only allow going to next question if user has selected an answer
-        if (userAnswers[currentQuestionIndex] !== null) {
-            if (currentQuestionIndex < shuffledQuestions.length - 1) {
-                currentQuestionIndex++;
-                showQuestion(currentQuestionIndex);
-            } else {
-                showResults();
-            }
-        } else {
-            alert('Molimo odaberite odgovor prije nastavka.');
-        }
-    });
+    // Next button click is now handled by countdown-timer.js
+    // This empty event listener is kept for compatibility
+    nextButton.addEventListener('click', () => {});
     
     restartButton.addEventListener('click', () => {
         resultsScreen.style.display = 'none';

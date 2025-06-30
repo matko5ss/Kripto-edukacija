@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extract Favicon</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+    #animation-container {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+    canvas {
+      border: 1px solid #ddd;
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 10px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .instructions {
+      max-width: 600px;
+      margin: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Extract Graduation Cap Favicon</h1>
+  <div class="instructions">
+    <p>This tool will help you create a favicon from the graduation cap animation.</p>
+    <p>Click the button below to generate a favicon image, then right-click on the image and save it.</p>
+  </div>
+  
+  <div id="animation-container"></div>
+  
+  <button id="capture-btn">Capture Frame for Favicon</button>
+  
+  <div id="output"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load the animation
+      const animation = lottie.loadAnimation({
+        container: document.getElementById('animation-container'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: './Animations/graduation-cap.json'
+      });
+      
+      // Button to capture a frame
+      document.getElementById('capture-btn').addEventListener('click', function() {
+        // Pause the animation at a good frame
+        animation.goToAndStop(30, true);
+        
+        // Get the SVG element
+        const svgElement = document.querySelector('#animation-container svg');
+        
+        // Create a canvas element
+        const canvas = document.createElement('canvas');
+        canvas.width = 32;
+        canvas.height = 32;
+        const ctx = canvas.getContext('2d');
+        
+        // Create an image from the SVG
+        const svgData = new XMLSerializer().serializeToString(svgElement);
+        const img = new Image();
+        
+        img.onload = function() {
+          // Draw the image on the canvas
+          ctx.fillStyle = 'transparent';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          
+          // Convert canvas to data URL
+          const dataUrl = canvas.toDataURL('image/png');
+          
+          // Display the image
+          const outputDiv = document.getElementById('output');
+          outputDiv.innerHTML = '';
+          
+          const resultImg = document.createElement('img');
+          resultImg.src = dataUrl;
+          resultImg.style.width = '64px';
+          resultImg.style.height = '64px';
+          
+          const downloadLink = document.createElement('a');
+          downloadLink.href = dataUrl;
+          downloadLink.download = 'graduation-cap-favicon.png';
+          downloadLink.textContent = 'Download Favicon';
+          downloadLink.style.display = 'block';
+          downloadLink.style.margin = '10px';
+          
+          outputDiv.appendChild(resultImg);
+          outputDiv.appendChild(downloadLink);
+          
+          // Add instructions
+          const instructions = document.createElement('p');
+          instructions.textContent = 'Right-click on the image and select "Save Image As..." or click the download link above.';
+          outputDiv.appendChild(instructions);
+        };
+        
+        img.src = 'data:image/svg+xml;base64,' + btoa(svgData);
+      });
+    });
+  </script>
+</body>
+</html>

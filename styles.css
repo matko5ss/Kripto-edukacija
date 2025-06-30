@@ -920,6 +920,15 @@ footer {
   font-weight: 600;
 }
 
+.unanswered-text {
+  color: #f39c12;
+  font-weight: 600;
+}
+
+.question-review.unanswered {
+  border-left: 4px solid #f39c12;
+}
+
 @media (max-width: 768px) {
   .quiz-container {
     padding: 1.5rem;
