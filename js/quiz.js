@@ -108,12 +108,12 @@ document.addEventListener('DOMContentLoaded', function() {
             correctAnswer: 2
         },
         {
-            question: "Koji je jedan od glavnih izazova kriptovaluta?",
+            question: "Koji konsenzusni mehanizam trenutno koristi Ethereum?",
             options: [
-                "Prevelika regulacija",
-                "Volatilnost cijena",
-                "Prejednostavno korištenje",
-                "Previše korisnika"
+                "Proof of Work (PoW)",
+                "Proof of Stake (PoS)",
+                "Delegated Proof of Stake (DPoS)",
+                "Proof of Authority (PoA)"
             ],
             correctAnswer: 1
         },
