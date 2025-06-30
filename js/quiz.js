@@ -196,12 +196,12 @@ document.addEventListener('DOMContentLoaded', function() {
             correctAnswer: 1
         },
         {
-            question: "Koja je jedna od novih prilika za pravničku profesiju u blockchain području?",
+            question: "Koji porezni tretman imaju kriptovalute u Hrvatskoj?",
             options: [
-                "Smanjenje potrebe za pravnim uslugama",
-                "Specijalizacija u području tokenizacije imovine i pametnih ugovora",
-                "Isključivo tradicionalna pravna praksa",
-                "Potpuno automatizirane pravne usluge bez ljudske intervencije"
+                "Ne podliježu nikakvom oporezivanju",
+                "Oporezuju se po stopi od 10% plus prirez, uz određena oslobođenja",
+                "Oporezuju se jednako kao dionice po stopi od 25%",
+                "Oporezuju se samo ako se koriste za plaćanje robe i usluga"
             ],
             correctAnswer: 1
         },
@@ -216,12 +216,12 @@ document.addEventListener('DOMContentLoaded', function() {
             correctAnswer: 1
         },
         {
-            question: "Koji je jedan od trendova u regulaciji kriptovaluta?",
+            question: "Koje obveze imaju pružatelji usluga povezani s kriptovalutama prema AML/CFT propisima?",
             options: [
-                "Potpuna zabrana u svim zemljama",
-                "Ignoriranje kriptovaluta od strane regulatora",
-                "Konvergencija regulatornih pristupa na globalnoj razini",
-                "Ukidanje svih poreza na kriptovalute"
+                "Nemaju nikakve obveze jer kriptovalute nisu službeno sredstvo plaćanja",
+                "Samo ograničavanje transakcija na iznose manje od 1000 eura",
+                "Provođenje dubinske analize stranaka (KYC) i praćenje sumnjivih transakcija",
+                "Isključivo izvještavanje porezne uprave o godišnjim prihodima"
             ],
             correctAnswer: 2
         }
