@@ -1,6 +1,6 @@
-# RARA - Edukativna platforma o kriptovalutama i blockchain tehnologiji
+# Kripto Edukacija - Edukativna platforma o kriptovalutama i blockchain tehnologiji
 
-RARA je edukativna web stranica koja služi kao vodič kroz svijet kriptovaluta i blockchain tehnologije. Stranica je dizajnirana kao tutorial platforma s jednostavnim i razumljivim sadržajem.
+Kripto Edukacija je edukativna web stranica koja služi kao vodič kroz svijet kriptovaluta i blockchain tehnologije. Stranica je dizajnirana kao tutorial platforma s jednostavnim i razumljivim sadržajem.
 
 ## Struktura projekta
 

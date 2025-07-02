@@ -16,16 +16,16 @@ document.addEventListener('DOMContentLoaded', function() {
   animationWrapper.className = 'animation-wrapper';
   animationWrapper.id = 'lottie-container';
   
-  // Create RARA text overlay that will appear when beak opens
+  // Create Edukacija text overlay that will appear when beak opens
   const raraText = document.createElement('div');
   raraText.className = 'rara-text';
-  raraText.textContent = 'RARA';
+  raraText.textContent = 'Edukacija';
   raraText.style.display = 'none';
   
   // Create speech bubble div
   const speechBubble = document.createElement('div');
   speechBubble.className = 'speech-bubble';
-  speechBubble.textContent = 'RARA!';
+  speechBubble.textContent = 'Edukacija!';
   speechBubble.style.display = 'none';
   
   // Add elements to the page
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Analyze frames to detect beak opening
     // Since we can't directly access the animation structure,
-    // we'll use a timer-based approach to show/hide the RARA text
+    // we'll use a timer-based approach to show/hide the Edukacija text
     animation.addEventListener('enterFrame', (e) => {
       currentFrame = Math.floor(e.currentTime * animation.frameRate);
       
@@ -187,13 +187,13 @@ document.addEventListener('DOMContentLoaded', function() {
       speechBubble.style.display = 'block';
       
       // Phrases to cycle through
-      const phrases = ['RARA!', 'Blockchain!', 'MiCA!', 'Pravni savjet?', 'Kriptovalute!'];
+      const phrases = ['Edukacija!', 'Blockchain!', 'MiCA!', 'Pravni savjet?', 'Kriptovalute!'];
       speechBubble.textContent = phrases[Math.floor(Math.random() * phrases.length)];
       
-      // Show RARA text for a moment
+      // Show Edukacija text for a moment
       raraText.style.display = 'block';
       
-      // Hide speech bubble and RARA text after 3 seconds
+      // Hide speech bubble and Edukacija text after 3 seconds
       setTimeout(() => {
         speechBubble.style.display = 'none';
         if (!isBeakOpen) {

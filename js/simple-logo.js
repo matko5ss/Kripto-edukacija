@@ -1,6 +1,6 @@
 /**
  * Simple Text Logo
- * Creates a clean text-based logo for the RARA website
+ * Creates a clean text-based logo for the Edukacija website
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Create simple text logo
   const logoText = document.createElement('div');
   logoText.className = 'logo-text';
-  logoText.textContent = 'RARA';
+  logoText.textContent = 'Edukacija';
   
   // Add to page
   logoDiv.appendChild(logoText);

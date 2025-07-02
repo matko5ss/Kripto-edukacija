@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Create speech bubble div
   const speechBubble = document.createElement('div');
   speechBubble.className = 'speech-bubble';
-  speechBubble.textContent = 'RARA!';
+  speechBubble.textContent = 'Edukacija!';
   speechBubble.style.display = 'none';
   
   // Create lawyer wig element
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
       speechBubble.style.display = 'block';
       
       // Phrases to cycle through
-      const phrases = ['RARA!', 'Blockchain!', 'MiCA!', 'Pravni savjet?', 'Kriptovalute!'];
+      const phrases = ['Edukacija!', 'Blockchain!', 'MiCA!', 'Pravni savjet?', 'Kriptovalute!'];
       speechBubble.textContent = phrases[Math.floor(Math.random() * phrases.length)];
       
       // Hide speech bubble after 3 seconds

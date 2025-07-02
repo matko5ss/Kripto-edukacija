@@ -1,6 +1,6 @@
 /**
  * Animation with Text Logo
- * Displays the animation from Animations folder with RARA text below
+ * Displays the animation from Animations folder with Edukacija text below
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Create text element
   const logoText = document.createElement('div');
   logoText.className = 'logo-text';
-  logoText.textContent = 'RARA';
+  logoText.textContent = 'Edukacija';
   
   // Add elements to the page
   logoContainer.appendChild(animationContainer);

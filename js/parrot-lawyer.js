@@ -31,7 +31,7 @@ class ParrotLawyer {
     // Animation properties
     this.isAnimating = false;
     this.animationFrame = 0;
-    this.phrases = ["RARA!", "Pravni savjet?", "Blockchain!", "Kriptovalute!", "MiCA!"];
+    this.phrases = ["Edukacija!", "Pravni savjet?", "Blockchain!", "Kriptovalute!", "MiCA!"];
     this.currentPhrase = 0;
     
     // Start idle animation
@@ -257,7 +257,7 @@ class ParrotLawyer {
     this.speechText.setAttribute("font-size", "16");
     this.speechText.setAttribute("font-weight", "bold");
     this.speechText.setAttribute("text-anchor", "middle");
-    this.speechText.textContent = "RARA!";
+    this.speechText.textContent = "Edukacija!";
     this.svg.appendChild(this.speechText);
   }
   
@@ -305,7 +305,7 @@ class ParrotLawyer {
     let talkCount = 0;
     const maxTalks = 6;
     
-    // Create RARA text that appears when beak opens
+    // Create Edukacija text that appears when beak opens
     if (!this.raraText) {
       this.raraText = document.createElementNS("http://www.w3.org/2000/svg", "text");
       this.raraText.setAttribute("x", "100");
@@ -315,7 +315,7 @@ class ParrotLawyer {
       this.raraText.setAttribute("font-weight", "bold");
       this.raraText.setAttribute("text-anchor", "middle");
       this.raraText.setAttribute("fill", "#ff5722");
-      this.raraText.textContent = "RARA";
+      this.raraText.textContent = "Edukacija";
       this.raraText.style.opacity = "0";
       this.svg.appendChild(this.raraText);
     }
@@ -324,7 +324,7 @@ class ParrotLawyer {
       // Open and close beak
       if (talkCount % 2 === 0) {
         this.beak.setAttribute("d", "M90,110 L100,145 L110,110"); // Open beak wider
-        this.raraText.style.opacity = "1"; // Show RARA text
+        this.raraText.style.opacity = "1"; // Show Edukacija text
         
         // Add visual sound waves when beak is open
         if (!this.soundWaves) {
@@ -347,7 +347,7 @@ class ParrotLawyer {
         this.soundWaves.forEach(wave => wave.style.opacity = "1");
       } else {
         this.beak.setAttribute("d", "M90,110 L100,125 L110,110"); // Close beak
-        this.raraText.style.opacity = "0"; // Hide RARA text
+        this.raraText.style.opacity = "0"; // Hide Edukacija text
         
         // Hide sound waves
         if (this.soundWaves) {

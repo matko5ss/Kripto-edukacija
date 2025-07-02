@@ -1,4 +1,4 @@
-// Script for RARA website
+// Script for Edukacija website
 
 // Add smooth scrolling for anchor links
 document.addEventListener('DOMContentLoaded', function() {
