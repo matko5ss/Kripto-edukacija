@@ -18,7 +18,7 @@
     <script src="js/blockchain-animation.js" defer></script>
     <script src="js/bitcoin-animation.js" defer></script>
     <script src="js/wallet-animation.js" defer></script>
-    <script src="js/private-key-animation.js" defer></script>
+    <script src="js/privatekey-animation.js" defer></script>
     <script src="js/buy-animation.js" defer></script>
   </head>
   <body>
@@ -158,36 +158,42 @@
 
           <h3>Kripto novčanici i privatni ključevi</h3>
           <p>
-            Kripto novčanik je digitalni alat koji pojedincima omogućuje
+            Kripto novčanik je digitalni alat koji omogućuje korisnicima
             pohranjivanje, primanje i slanje kriptovaluta poput Bitcoina i
-            Ethereuma. Osnovna svrha kripto novčanika je pružiti sigurno mjesto
-            za pohranu privatnih kripto ključeva, koji su neophodni za pristup i
-            upravljanje kriptovalutama.
+            Ethereuma. Njegova glavna svrha je sigurno čuvanje privatnih kripto
+            ključeva, koji su ključni za pristup i upravljanje kriptovalutama.
           </p>
 
           <p>
-            Privatni ključ bitcoin adrese je niz od 52 brojeva i slova koji
-            omogućava slanje bitcoina sa neke bitcoin adrese. Iz privatnog
-            ključa je moguće izračunati bitcoin adresu, no, iz bitcoin adrese
-            nije moguće izračunati privatni ključ.
+            Privatni ključ je niz znakova (najčešće 64 znamenke i slova za
+            Bitcoin) koji omogućuje potpunu kontrolu nad kriptovalutama na
+            određenoj adresi. Iz privatnog ključa moguće je izračunati javni
+            ključ i adresu novčanika, ali je proces nepovratan – iz adrese nije
+            moguće izračunati privatni ključ
           </p>
 
-          <div class="animation-row" style="display: flex; gap: 20px;">
-            <div
-              id="wallet-animation"
-              class="animation-container"
-              style="width: 48%; height: 300px; margin: 20px 0"
-            ></div>
-            <div
-              id="private-key-animation"
-              class="animation-container"
-              style="width: 48%; height: 300px; margin: 20px 0"
-            ></div>
+          <div
+            class="image-container"
+            style="text-align: center; margin: 20px 0"
+          >
+            <img
+              src="images/Bitcoinkey.webp"
+              alt="Bitcoin ključ ilustracija"
+              class="responsive-image"
+              style="max-width: 50%; height: auto"
+            />
+            <style>
+              @media (max-width: 768px) {
+                .responsive-image {
+                  max-width: 100% !important;
+                }
+              }
+            </style>
           </div>
 
           <p>
-            Privatni ključ je jedini način da osoba potvrdi da je upravo ona
-            vlasnik određene bitcoin adrese.
+            Privatni ključ je poput lozinke: onaj tko ga posjeduje, ima pristup
+            svim sredstvima na toj adresi
           </p>
 
           <p>
@@ -270,34 +276,27 @@
 
           <h3>Sigurnosne mjere i najbolje prakse</h3>
           <p>
-            Jedna od najvažnijih sigurnosnih mjera je ne držanje velikih
-            količina kriptovaluta na mjenjačnicama. Preporučuje se korištenje
-            osobnog hardverskog ili softverskog novčanika gdje posjedujete
-            privatne ključeve. Time smanjujete rizik od hakiranja ili propasti
-            platforme.
+            Jedna od najvažnijih stvari za sigurnost je da ne držite puno
+            kriptovaluta na burzama (mjenjačnicama), jer su one češće meta
+            hakera ili mogu propasti. Najbolje je koristiti vlastiti novčanik –
+            to može biti aplikacija na mobitelu ili računalu (softverski
+            novčanik) ili poseban uređaj s dodatnom zaštitom (hardverski
+            novčanik). Hardverski novčanici su posebno popularni jer nude veću
+            sigurnost.
           </p>
 
           <p>
-            Postoje različite vrste kripto novčanika: softverski novčanici su
-            aplikacije koje se instaliraju na računalo ili mobilni uređaj, dok
-            su hardverski novčanici fizički uređaji koji često imaju dodatne
-            sigurnosne značajke. Hardverski novčanici su najpopularniji među
-            kripto analitičarima zbog dodatne sigurnosti.
+            Također, važno je paziti na razne prijevare, lažne oglase i pokušaje
+            krađe podataka (fišing). Ako tek ulazite u svijet kriptovaluta,
+            uložite samo onoliko novca koliko vam nije žao izgubiti i budite
+            svjesni da cijene često jako variraju
           </p>
 
           <p>
-            Važno je naučiti prepoznati fišing pokušaje, lažne oglase i
-            prijevare. Početnicima se preporučuje ulaganje samo onolikih iznosa
-            koje mogu zaboraviti na neko vrijeme, svjesni da su kriptovalute
-            volatilne.
-          </p>
-
-          <p>
-            Klijente u ovom prostoru treba savjetovati da kontinuirano prate
-            razvoj tehnologije i regulatornog okvira, jer se oba brzo mijenjaju.
-            Sigurnost i edukacija ostaju ključni prioriteti za sve koji ulaze u
-            svijet kriptovaluta i kripto prostor, bez obzira na njihovu
-            profesionalnu pozadinu.
+            Dobro je stalno pratiti novosti i promjene u tehnologiji i zakonima,
+            jer se sve brzo mijenja. Ukratko, sigurnost i učenje o
+            kriptovalutama najvažniji su za svakoga tko se upušta u ovaj svijet,
+            bez obzira na iskustvo.
           </p>
         </article>
 

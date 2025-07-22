@@ -8,6 +8,8 @@
   --dark-bg: #2d3436;
   --border-radius: 8px;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --main-bg-color: #e5f6fa; /* Main background color for consistency */
+  --section-bg-color: #ffffff; /* Section background color */
 }
 
 /* Responsive breakpoints */
@@ -28,7 +30,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--light-bg);
+  background-color: var(--main-bg-color);
 }
 
 .container {
@@ -227,7 +229,7 @@ nav a.active {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color: var(--section-bg-color);
   min-width: 200px;
   max-height: 300px;
   overflow-y: auto;
@@ -252,7 +254,7 @@ nav a.active {
 }
 
 .dropdown-content a:hover {
-  background-color: var(--light-bg);
+  background-color: var(--main-bg-color);
   color: var(--primary-color);
 }
 
@@ -286,7 +288,7 @@ nav a.active {
     width: 100%;
     margin-top: 0.5rem;
     padding: 0;
-    background-color: var(--light-bg);
+    background-color: var(--main-bg-color);
     max-height: 200px; /* Smaller max-height for mobile */
     overflow-y: auto; /* Ensure scrolling works on mobile too */
   }
@@ -438,7 +440,7 @@ nav a.active {
 }
 
 .toggle-btn {
-  background-color: white;
+  background-color: var(--section-bg-color);
   color: var(--primary-color);
   border: none;
   border-radius: 4px;
@@ -449,14 +451,14 @@ nav a.active {
 }
 
 .toggle-btn:hover {
-  background-color: #e0e0e0;
+  background-color: var(--main-bg-color);
 }
 
 .coming-soon-message {
   width: 100%;
   text-align: center;
   padding: 3rem;
-  background-color: #f5f5f5;
+  background-color: var(--main-bg-color);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
@@ -505,7 +507,7 @@ nav a.active {
 }
 
 .tutorial-card {
-  background-color: #ebf7fa;
+  background-color: var(--main-bg-color);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 2rem;
@@ -571,7 +573,7 @@ nav a.active {
 
 /* Disclaimer styling */
 .disclaimer {
-  background-color: #fff8e1;
+  background-color: var(--section-bg-color);
   border-left: 4px solid #ffc107;
   padding: 15px;
   margin: 20px 0;
@@ -602,7 +604,7 @@ nav a.active {
 
 /* Concept box styling */
 .concept-box {
-  background-color: #ebf7fa;
+  background-color: var(--section-bg-color);
   border-left: 4px solid var(--primary-color);
   padding: 15px 20px;
   margin: 20px 0;
@@ -614,6 +616,25 @@ nav a.active {
   color: var(--primary-color);
   margin-top: 0;
   margin-bottom: 10px;
+}
+
+/* Tutorial section styling */
+.tutorial-section {
+  background-color: var(--section-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: block;
+  width: 100%;
+}
+
+.tutorial-intro {
+  background-color: var(--section-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 /* Tutorial navigation styling */
@@ -681,6 +702,12 @@ nav a.active {
   max-width: 800px;
 }
 
+main {
+  min-height: calc(100vh - 150px);
+  padding: 2rem 0;
+  background-color: var(--main-bg-color);
+}
+
 /* Responsive tutorial content */
 @media (max-width: 768px) {
   .tutorial-content,
@@ -729,7 +756,7 @@ nav a.active {
 }
 
 article {
-  background-color: white;
+  background-color: var(--section-bg-color);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 2rem;
@@ -792,7 +819,7 @@ footer {
 
 /* Quiz Styles */
 .quiz-container {
-  background-color: white;
+  background-color: var(--section-bg-color);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 2rem;
@@ -818,7 +845,7 @@ footer {
 }
 
 .option {
-  background-color: var(--light-bg);
+  background-color: var(--main-bg-color);
   border: 2px solid var(--light-bg);
   border-radius: var(--border-radius);
   padding: 1rem;
@@ -876,7 +903,7 @@ footer {
 .answers-review {
   margin-top: 2rem;
   padding: 1rem;
-  background-color: var(--light-bg);
+  background-color: var(--main-bg-color);
   border-radius: var(--border-radius);
 }
 
@@ -889,7 +916,7 @@ footer {
   margin-bottom: 1.5rem;
   padding: 1rem;
   border-radius: var(--border-radius);
-  background-color: white;
+  background-color: var(--section-bg-color);
 }
 
 .question-review.correct {
