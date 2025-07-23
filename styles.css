@@ -10,6 +10,7 @@
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --main-bg-color: #e5f6fa; /* Main background color for consistency */
   --section-bg-color: #ffffff; /* Section background color */
+  --concept-box-border-color: var(--primary-color); /* Color for concept box borders */
 }
 
 /* Responsive breakpoints */
@@ -610,12 +611,20 @@ nav a.active {
   margin: 20px 0;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
+  transition: all 0.3s ease;
 
 .concept-box h5 {
   color: var(--primary-color);
   margin-top: 0;
   margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Hover effect for concept boxes */
+.concept-box:hover {
+  border-left-width: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateX(3px);
 }
 
 /* Tutorial section styling */
